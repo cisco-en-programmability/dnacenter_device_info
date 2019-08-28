@@ -75,7 +75,7 @@ def get_all_device_info(dnac_jwt_token):
     :param dnac_jwt_token: DNA C token
     :return: DNA C device inventory info
     """
-    url = DNAC_URL + '/api/v1/network-device'
+    url = DNAC_URL + '/dna/intent/api/v1/network-device'
     header = {'content-type': 'application/json', 'x-auth-token': dnac_jwt_token}
     all_device_response = requests.get(url, headers=header, verify=False)
     all_device_info = all_device_response.json()
@@ -104,7 +104,7 @@ def get_device_info(device_id, dnac_jwt_token):
     :param dnac_jwt_token: DNA C token
     :return: device info
     """
-    url = DNAC_URL + '/api/v1/network-device?id=' + device_id
+    url = DNAC_URL + '/dna/intent/api/v1/network-device?id=' + device_id
     header = {'content-type': 'application/json', 'x-auth-token': dnac_jwt_token}
     device_response = requests.get(url, headers=header, verify=False)
     device_info = device_response.json()

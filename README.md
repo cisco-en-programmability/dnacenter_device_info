@@ -41,5 +41,4 @@ The device information for the device with the name: PDX-9300
 
 **License**
 
-This project is licensed to you under the terms of the [Cisco Sample
-Code License](./LICENSE).
+This project is licensed to you under the terms of the [Cisco Sample Code License](./LICENSE).

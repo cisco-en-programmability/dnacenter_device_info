@@ -22,6 +22,7 @@ The device information for the device with the name: PDX-9300
 
 
 {
+
     "type" : "Cisco Catalyst 9300 Switch" , 
     "macAddress" : "70:d3:79:be:28:00" , 
     "lineCardId" : "" , 
@@ -36,6 +37,7 @@ The device information for the device with the name: PDX-9300
     "instanceUuid" : "13606691-e5bf-4f21-91d8-858a2363a099" , 
     "instanceTenantId" : "5bef48543c584b0088491a83" , 
     "id" : "13606691-e5bf-4f21-91d8-858a2363a099"
+
 }
 
 

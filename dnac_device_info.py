@@ -115,6 +115,8 @@ def main(device_hostname):
     """
     This sample script will print the Cisco DNA Center device information for the device
     with the name {device_hostname}
+    - it will identify if the device is managed by Cisco DNA Center
+    - retrieve the device information
     :param device_hostname: the device hostname
     :return: None
     """

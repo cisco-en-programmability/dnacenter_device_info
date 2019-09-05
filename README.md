@@ -14,7 +14,11 @@ This is a Python sample code to showcase how to retrieve the Cisco DNA Center de
 **Usage**
 
 - $ python dnac_device_info.py PDX-9300
-The above example will retrieve the information for the device with the hostname {PDX-9300}
+
+The above example will:
+ - verify if the device with the {hostname} is managed by Cisco DNA Center
+ - if yes, retrieve the information for the device with the hostname {PDX-9300}
+ - if no, notify the device is not managed by Cisco DNA Center
 
 - Sample output
 

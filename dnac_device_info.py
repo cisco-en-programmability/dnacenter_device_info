@@ -55,10 +55,10 @@ def pprint(json_data):
 
 def get_dnac_jwt_token(dnac_auth):
     """
-    Create the authorization token required to access DNA C
-    Call to Cisco DNA C - /api/system/v1/auth/login
-    :param dnac_auth - DNA C Basic Auth string
-    :return Cisco DNA C Auth Token
+    Create the authorization token required to access Cisco DNA Center
+    Call to Cisco DNA Center - /api/system/v1/auth/login
+    :param dnac_auth - Cisco DNA Center Basic Auth string
+    :return Cisco DNA Center Auth Token
     """
 
     url = DNAC_URL + '/dna/system/api/v1/auth/token'
@@ -72,8 +72,8 @@ def get_dnac_jwt_token(dnac_auth):
 def get_all_device_info(dnac_jwt_token):
     """
     The function will return all network devices info
-    :param dnac_jwt_token: DNA C token
-    :return: DNA C device inventory info
+    :param dnac_jwt_token: Cisco DNA Center token
+    :return: Cisco DNA Center device inventory info
     """
     url = DNAC_URL + '/dna/intent/api/v1/network-device'
     header = {'content-type': 'application/json', 'x-auth-token': dnac_jwt_token}
@@ -84,9 +84,9 @@ def get_all_device_info(dnac_jwt_token):
 
 def get_device_id_name(device_name, dnac_jwt_token):
     """
-    This function will find the DNA C device id for the device with the name {device_name}
+    This function will find the Cisco DNA Center device id for the device with the name {device_name}
     :param device_name: device hostname
-    :param dnac_jwt_token: DNA C token
+    :param dnac_jwt_token: Cisco DNA Center token
     :return:
     """
     device_id = None
@@ -99,9 +99,9 @@ def get_device_id_name(device_name, dnac_jwt_token):
 
 def get_device_info(device_id, dnac_jwt_token):
     """
-    This function will retrieve all the information for the device with the DNA C device id
-    :param device_id: DNA C device_id
-    :param dnac_jwt_token: DNA C token
+    This function will retrieve all the information for the device with the Cisco DNA Center device id
+    :param device_id: Cisco DNA Center device_id
+    :param dnac_jwt_token: Cisco DNA Center token
     :return: device info
     """
     url = DNAC_URL + '/dna/intent/api/v1/network-device?id=' + device_id
@@ -119,7 +119,7 @@ def main(device_hostname):
     :return: None
     """
 
-    #  obtain the Cisco DNA C Auth Token
+    #  obtain the Cisco DNA Center Auth Token
     dnac_token = get_dnac_jwt_token(DNAC_AUTH)
 
     # find the Cisco DNA Center device id for the device with the name {device_hostname}

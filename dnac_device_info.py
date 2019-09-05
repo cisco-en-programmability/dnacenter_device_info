@@ -129,7 +129,7 @@ def main(device_hostname):
 
     # check if device is managed by Cisco DNA Center
     if device_id is None:
-        print('\nThe device with the hostname: ', device_hostname, ' is not managed by Cisco DNA Center')
+        print('\nThe device with the hostname: ', device_hostname, ' is not managed by Cisco DNA Center\n\n')
     else:
         # find the Cisco DNA Center device info for the device with the device id {device_id}
         device_info = get_device_info(device_id, dnac_token)
